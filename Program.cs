@@ -64,7 +64,7 @@ using System.Text;
                 {
                     Console.WriteLine($"Price: {data.Price}, Coin: {data.ProductId}, Time: {data.Time}");
 
-                    // TODO: RabbitMQ Implementation
+                    // RabbitMQ Implementation
 
                     string message = $"Price: {data.Price}, Coin: {data.ProductId}, Time: {data.Time}";
 
@@ -82,9 +82,7 @@ using System.Text;
                         
                         var body = Encoding.UTF8.GetBytes(message);
                         channel.BasicPublish(exchange: "ingestor_exchange",
-                            
                             // TODO: Routingkey specification?
-                            
                             routingKey: "",
                             basicProperties: null,
                             body: body);
