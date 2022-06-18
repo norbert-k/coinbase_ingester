@@ -3,9 +3,7 @@ using Coinbase.Pro.WebSockets;
 using RabbitMQ.Client;
 using System.Text;
 
-namespace Coinbase.Client.Websocket.Sample
 
-{
     class Program
     {
         static async Task Main()
@@ -101,4 +99,3 @@ namespace Coinbase.Client.Websocket.Sample
             }
         }
     }
-}
